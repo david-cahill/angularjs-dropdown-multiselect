@@ -268,7 +268,7 @@ directiveModule.directive('ngDropdownMultiselect', ['$filter', '$document', '$co
 
                     dontRemove = dontRemove || false;
 
-                    var exists = _.findIndex($scope.selectedModel, finalObj) !== -1;
+                    var exists = _.findIndex($scope.selectedModel, findObj) !== -1;
 
                     if (!dontRemove && exists) {
                         $scope.selectedModel.splice(_.findIndex($scope.selectedModel, finalObj), 1);
