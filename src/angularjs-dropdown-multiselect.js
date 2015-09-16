@@ -271,7 +271,7 @@ directiveModule.directive('ngDropdownMultiselect', ['$filter', '$document', '$co
                     var exists = _.findIndex($scope.selectedModel, findObj) !== -1;
 
                     if (!dontRemove && exists) {
-                        $scope.selectedModel.splice(_.findIndex($scope.selectedModel, finalObj), 1);
+                        $scope.selectedModel.splice(_.findIndex($scope.selectedModel, findObj), 1);
                         $scope.externalEvents.onItemDeselect(finalObj);
                     } else if (!exists && ($scope.settings.selectionLimit === 0 || $scope.selectedModel.length < $scope.settings.selectionLimit)) {
                         $scope.selectedModel.push(finalObj);
